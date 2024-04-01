@@ -1,0 +1,222 @@
+@font-face {
+    font-family: haas;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+*{
+margin: 0;
+padding: 0;
+    box-sizing: border-box;
+    font-family: haas;
+}
+html, body{
+width: 100%;
+height: 100%;
+}
+
+#page1{
+    /* height: 100vh; */
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+#nav{
+    /* height: 100px; */
+    padding: 2vw 2vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 50px;
+    font-weight: 500;
+    color: rgb(33, 33, 33);
+    font-size: 18px;
+    overflow: hidden;
+    position: relative;
+}
+.nav-part2 h4:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    transition: all ease 0.3s;
+}
+
+.nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+.nav-part2 h4 a{
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    transition: 250ms all ease;
+    z-index: 9;
+    position: relative;
+}
+.nav-part2 h4:hover a{
+    color: white;
+}
+
+#center{
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    /* background-color: orange; */
+    padding-bottom: 2vw;
+    
+    border-bottom: 1px solid #111111;
+}
+#left h3{
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+}
+#center h1 {
+    font-size: 10vw;
+    line-height: 9vw;
+    text-align: right;
+}
+#page1 video{
+    width: 100%;
+    border-radius: 30px;
+    position: relative;
+    margin-top: 4vw;
+}
+#hero-shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;   
+    /* background-color: #fe320a; */
+    border-radius: 0%;
+    /* border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%; */
+    right: 0;
+    top: 65vh;
+    /* filter: blur(30px); */
+}
+#hero-1{
+    height: 100%;
+    width: 100%;
+    background-color: #fe320a;
+    position: absolute;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(30px);
+
+}
+
+#hero-2{
+    height: 30vw;
+    width: 30vw;
+    background: linear-gradient(#fe320a, orange);
+    border-radius: 50%;
+    filter: blur(30px);
+    animation-name: anim1;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+    position: absolute;
+    
+}
+
+#hero-3{
+    height: 30vw;
+    width: 30vw;
+    background: linear-gradient(#fe320a, orange);
+    position: absolute;
+    filter: blur(30px);
+    position: absolute;
+    animation-name: anim2;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes anim1 {
+    from{
+        transform: translate(55%, -2%);
+    }
+    to{
+        transform: translate(0%, 10%);
+    }
+}
+
+@keyframes anim2 {
+    from{
+        transform: translate(5%, -5%);
+    }
+    to{
+        transform: translate(-30%, 20%);
+    }
+}
+
+#page2{
+    min-height: 100vh;
+    padding: 8vw 0;
+    width: 100vw;
+    /* background-color: red; */
+    background-color: #EFEAE3;
+}
+#moving-text{
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+.com{
+    white-space: nowrap;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+    display: inline-block;
+}
+#moving-text h1{
+    font-size: 9vw;
+    /* background-color: lightblue; */
+    display: inline-block;
+}
+#gola{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin: 1vw 2vw;
+    display: inline-block;
+    background-color: #fe320a;
+}
+
+@keyframes move {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#page2-bottom{
+    height: 80vh;
+    width: 100%;
+    background-color: aqua;
+}
